@@ -7,7 +7,6 @@
     <meta name="description" content="提供国外美国区苹果ID账号免费共享，登录教程，ID注册教程，国外ID购买地址等服务。">
     <meta name="keywords" content="美国区苹果ID, 苹果ID共享, 美区AppleID, 国外ID, 免费共享ID账号, 苹果ID教程">
     <meta name="author" content="52iD分享">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>国外区苹果ID账号免费共享</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,15 +17,12 @@
             margin: 0;
             padding: 0;
         }
-
         .container {
             margin-top: 20px;
         }
-
         .iframe-container {
             margin-bottom: 20px;
         }
-
         .warning {
             background-color: #f8d7da;
             padding: 15px;
@@ -34,7 +30,6 @@
             border: 1px solid #f5c6cb;
             margin-bottom: 20px;
         }
-
         .account-info {
             background-color: #fff3cd;
             padding: 20px;
@@ -42,7 +37,6 @@
             border: 1px solid #ffeeba;
             margin-bottom: 20px;
         }
-
         .btn-container {
             display: flex;
             flex-wrap: wrap;
@@ -50,20 +44,45 @@
             margin-top: 20px;
             justify-content: center;
         }
-
         .btn-container .btn {
             width: 150px;
             margin-bottom: 10px;
         }
-
         footer {
             background-color: #f1f1f1;
             padding: 20px;
             text-align: center;
         }
-
         footer p {
             margin: 5px 0;
+        }
+        /* === 收藏弹窗样式 === */
+        #collect-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.36);
+            justify-content: center;
+            align-items: center;
+        }
+        #collect-modal .modal-content {
+            background: #fff;
+            padding: 32px 20px 20px 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 320px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+            position: relative;
+        }
+        #collect-modal .close-btn {
+            position: absolute;
+            right: 12px; top: 8px;
+            font-size: 18px; color: #999;
+            cursor: pointer;
+        }
+        #collect-modal strong {
+            font-size: 1.15em; color: #fa4a0a;
         }
     </style>
     <script defer src="https://umami-52id-top.vercel.app/script.js" data-website-id="3cf50436-d887-4afd-b549-725dc1925283"></script>
@@ -92,8 +111,8 @@
             <section class="warning">
                 <strong>重要提示：</strong><br>
                 不论你是新手还是老手，必须看<a href="https://mp.weixin.qq.com/s/2S6J0cvDExzCK8OQcUFdWw"
-                    target="_blank">登录图文教程</a>，使用后请退出账号；禁止登陆iCloud，否则一切后果自负！
-              		所有id均为临时共享账号，每小时会自动改密，长期使用建议自己注册或者购买独享，若登录提示要验证码，请点击解锁账号过5分钟后再尝试，更新游戏应用请卸载重新安装。
+                    target="_blank">登录图文教程</a>，使用后请退出账号；禁止登陆iCloud，否则一切后果自负！<br>
+                所有id均为临时共享账号，每小时会自动改密，长期使用建议自己注册或者购买独享，若登录提示要验证码，请点击解锁账号过5分钟后再尝试，更新游戏应用请卸载重新安装。
             </section>
 
             <!-- 按钮区 -->
@@ -115,7 +134,38 @@
         </p>
     </footer>
 
+    <!-- 收藏本站弹窗 -->
+    <div id="collect-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCollectModal()">&times;</span>
+            <strong>温馨提示</strong>
+            <p style="margin-top: 12px;">按 <b>Ctrl + D</b> 快捷键<br>收藏本页面不迷路！<br>
+            <a href="https://www.52id.top/" target="_blank" style="display:inline-block;margin-top:6px;">https://www.52id.top/</a></p>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // 弹窗首次当天显示
+    (function(){
+        var modal = document.getElementById('collect-modal');
+        var today = (new Date()).toISOString().slice(0,10); // yyyy-mm-dd
+        if(localStorage.getItem('collectModalDate') !== today){
+            setTimeout(function(){
+                modal.style.display = 'flex';
+            }, 600); // 稍微延迟下弹出
+            localStorage.setItem('collectModalDate', today);
+        }
+        // 关闭弹窗函数
+        window.closeCollectModal = function() {
+            modal.style.display = 'none';
+        }
+        // 点击遮罩也关闭
+        modal.onclick = function(e){
+            if(e.target === modal) closeCollectModal();
+        }
+    })();
+    </script>
 </body>
 
 </html>

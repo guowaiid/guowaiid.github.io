@@ -30,7 +30,7 @@
 
 ## 联系方式
 
-- **站长联系**：hi@52id.top (iMessage / SMS)
+- **站长联系**：hi@52id.top (iMessage / Email)
 
 ## 免责声明
 

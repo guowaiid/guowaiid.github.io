@@ -14,7 +14,7 @@
    提供海外ID注册教程，指导用户如何成功注册美国区或其他地区的苹果ID：[海外ID注册教程](https://mp.weixin.qq.com/s/zVx5iXQ5XI0jbZ4k2tQpUA)。
 
 ### 4. **永久国外ID购买**
-   提供[永久国外ID购买地址](https://www.example.com)，为有长期需求的用户提供直接购买渠道。
+   提供[永久国外ID购买地址](https://share.52id.top)，为有长期需求的用户提供直接购买渠道。
 
 ### 5. **工具下载**
    提供小火箭（Stash）下载链接，用于突破地区限制：[小火箭下载](https://appleid.flowus.cn/share/6fba1888-f439-4256-8776-0d13c5864e93)。
@@ -31,7 +31,6 @@
 ## 联系方式
 
 - **站长联系**：hi@52id.top (iMessage / SMS)
-- **QQ群交流群**：[点击加入QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=6AR77GO1AS3jDib-uUUZFJMFRX7sNV7E&jump_from=webapi&authKey=Slizy/uXza2CEAKdjWN2nh7P1Nedd/C2nuoGPAe+639YZBEaiIxUOgk7UKSHRvu+)
 
 ## 免责声明
 
